@@ -8,7 +8,7 @@
 import Foundation
 
 //MARK: - MUSE -
-public enum XvEEGArea:UInt8 {
+public enum XvEEGArea:Int16 {
   
     case N  = 0  //nose, front of head
     case FP = 1  //pre-frontal
@@ -39,13 +39,13 @@ public struct XvEEGPacket {
 
 public struct XvEEGSensorPacket {
     
-    public var sensorArea:XvEEGArea
-    public var sensorIndex:UInt8
+    public var sensorArea:Int16
+    public var sensorIndex:Int16
     public var spectrum:[Double]
     public var noise:Int = 10
     public var timestamp:Date
     
-    public init(a:XvEEGArea, i:UInt8, spectrum:[Double]) {
+    public init(a:Int16, i:Int16, spectrum:[Double]) {
         
         self.timestamp = Date()
         self.sensorArea = a
