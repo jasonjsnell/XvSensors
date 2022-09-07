@@ -113,10 +113,10 @@ public class XvPPGHeartEvent {
 
 public struct XvBatteryPacket {
     
-    public var percentage:UInt16
+    public var percentage:Int16
     public var timestamp:Date
     
-    public init(percentage:UInt16) {
+    public init(percentage:Int16) {
         self.timestamp = Date()
         self.percentage = percentage
     }
